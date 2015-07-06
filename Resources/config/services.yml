@@ -1,0 +1,9 @@
+services:
+    hotflo_feature_toggle.feature_container:
+        class: JoshuaEstes\Component\FeatureToggle\FeatureContainer
+
+    hotflo_feature_toggle.feature_toggle_container:
+        class: Hotflo\FeatureToggleBundle\FeatureToggle\FeatureToggleContainer
+
+    hotflo_feature_toggle.generic_feature_toggle:
+        class: JoshuaEstes\Component\FeatureToggle\Toggle\FeatureToggleGeneric

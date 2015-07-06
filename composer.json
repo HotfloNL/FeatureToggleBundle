@@ -1,0 +1,35 @@
+{
+    "name": "hotflo/feature-toggle-bundle",
+    "description": "A Symfony2 Bundle implementing the https://github.com/JoshuaEstes/FeatureToggle library",
+    "type": "symfony-bundle",
+    "require": {
+        "php": ">=5.4.0",
+        "symfony/framework-bundle": ">=2.0",
+        "joshuaestes/feature-toggle": "^0.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.7",
+        "matthiasnoback/symfony-config-test": "^1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pim Widdershoven",
+            "email": "pim@hotflo.net"
+        }
+    ],
+    "autoload": {
+      "psr-4": {
+        "Hotflo\\FeatureToggleBundle\\": ""
+      }
+    },
+    "config": {
+      "bin-dir": "bin"
+    },
+    "minimum-stability": "stable",
+    "extra": {
+      "branch-alias": {
+        "dev-master": "0.2.x-dev"
+      }
+    }
+}
