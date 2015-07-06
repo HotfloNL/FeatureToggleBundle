@@ -53,7 +53,7 @@ class HotfloFeatureToggleExtension extends Extension
 
                 $container->setDefinition('hotflo_feature_toggle.toggle.' . $toggle, $container->findDefinition($properties['service']));
             } else {
-                if (class_exists($properties['class'])) {
+                if (!class_exists($properties['class'])) {
                     throw new InvalidConfigurationException(
                         sprintf('Class \'%s\' not found.', $properties['class'])
                     );
