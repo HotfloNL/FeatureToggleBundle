@@ -45,13 +45,7 @@ class HotfloFeatureToggleExtension extends Extension
 
         foreach ($config['toggles'] as $toggle => $properties) {
             if ($properties['type'] == 'service') {
-                if (!$container->hasDefinition($properties['service'])) {
-                    throw new InvalidConfigurationException(
-                        sprintf('Service \'%s\' not found in service container.', $properties['service'])
-                    );
-                }
-
-                $container->setDefinition('hotflo_feature_toggle.toggle.' . $toggle, $container->findDefinition($properties['service']));
+                $container->setAlias('hotflo_feature_toggle.toggle.' . $toggle, $properties['service']);
             } else {
                 if (!class_exists($properties['class'])) {
                     throw new InvalidConfigurationException(
